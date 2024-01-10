@@ -1,6 +1,10 @@
 <?php
 
+use App\Services\PdfWrapper;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use Spatie\Browsershot\Browsershot;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $pdf = (new PdfWrapper())
+        ->loadView('pdfs.charts', [
+            'title' => 'pie chart',
+        ]);
+
+    Mail::send('emails.test', [], function ($message) use ($pdf) {
+        $message->to('abc@gmail.com');
+        $message->attachData($pdf->generate()->pdf(), 'doc.pdf', [
+            'mime' => 'application/pdf',
+        ]);
+    });
+
+    dd('done');
 });
