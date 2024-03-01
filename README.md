@@ -17,8 +17,7 @@ This repository serves as a tutorial guide for integrating PDF generation functi
 
 
 ## Download your copy of the eBook today and become a JavaScript pro
-[![JavaScript: Explore ES2015 to ES2023](https://i3.ytimg.com/vi/320vwRDqi9w/hqdefault.jpg)]([https://youtu.be/320vwRDqi9w](https://qirolab.gumroad.com/l/javascript-from-es2015-to-es2023))
-
+[![JavaScript: ES2015 to ES2023](https://i.imgur.com/YyCohWc.png)](https://qirolab.gumroad.com/l/javascript-from-es2015-to-es2023)
 
 ## License
 
